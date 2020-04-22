@@ -26,6 +26,19 @@ const updateAuthor = async (req, res) => {
 
 // function to add author
 const addAuthor = async (req, res) => {
+
+   var newAuthor = new Author({
+     id: req.body.id,
+     first_name: req.body.first_name,
+     last_name: req.body.last_name
+   })
+   // add author to database
+   newAuthor.save(function (err, author) {
+     if (err) return console.error(err);
+   });
+   res.send("Added new author");
+ };
+
  res.send("Working on this feature");
 };
 
