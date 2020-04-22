@@ -36,11 +36,9 @@ const addAuthor = async (req, res) => {
    newAuthor.save(function (err, author) {
      if (err) return console.error(err);
    });
-   
- };
 
- res.send("Working on this feature");
 };
+
 
 // function to get author by id
 const getAuthorByID = (req, res) => {
